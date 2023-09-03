@@ -5,10 +5,12 @@
   <remote name="yoctoproject" fetch="git://git.yoctoproject.org/" review="git://git.yoctoproject.org/" />
   <remote name="github" fetch="git://github.com/" review="https://github.com/" />
   <remote name="gitlab" fetch="https://gitlab.com" review="https://gitlab.com/" />
-  <notice>Initialise or work in the project using
+  <notice>
+Initialise or work in the project using
     source setup 
 or
-    . setup</notice>
+    . setup
+  </notice>
 
   <default revision="rel-v2022.2" remote="github" sync-j="4" />
 
@@ -16,5 +18,7 @@ or
   <project path="layers/meta-openembedded" name="Xilinx/meta-openembedded" />
   <project path="layers/meta-xilinx" name="Xilinx/meta-xilinx" />
   <project path="layers/meta-xilinx-tools" name="Xilinx/meta-xilinx-tools" />
-  <project path="." name="sections/zynq" remote="gitlab" revision="master" />
+  <project path="layers/meta-navigator" name="sections/meta-navigator" remote="gitlab" revision="master">
+    <linkfile src="setup" dest="setup" />
+  </project>
 </manifest>
