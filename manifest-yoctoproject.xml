@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+  <remote name="openembedded" fetch="https://git.openembedded.org/" review="https://git.openembedded.org/" />
+  <remote name="yoctoproject" fetch="https://git.yoctoproject.org/" review="https://git.yoctoproject.org/" />
+  <remote name="github" fetch="https://github.com/" review="https://github.com/" />
+  <remote name="gitlab" fetch="https://gitlab.com" review="https://gitlab.com/" />
+  <notice>
+Initialise or work in the project using
+    source setup
+or
+    . setup
+  </notice>
+
+  <default revision="rel-v2023.1" remote="github" sync-j="4" />
+
+  <project path="layers/core" name="poky" remote="yoctoproject" revision="c805f0f90a2d1b0de49978e6516a4e7f9b11aff4" />
+  <project path="layers/meta-openembedded" name="Xilinx/meta-openembedded" />
+  <project path="layers/meta-xilinx" name="Xilinx/meta-xilinx" />
+  <project path="layers/meta-xilinx-tools" name="Xilinx/meta-xilinx-tools" />
+  <project path="layers/meta-navigator" name="sections/meta-navigator" remote="gitlab" revision="master">
+    <linkfile src="setup" dest="setup" />
+  </project>
+</manifest>
